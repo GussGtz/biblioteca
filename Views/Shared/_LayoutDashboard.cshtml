@@ -35,7 +35,13 @@
                         <a class="nav-link text-white fw-semibold" href="#">Libros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white fw-semibold" href="#">Usuarios</a>
+                        <a class="nav-link text-white fw-semibold" href="#">Colecciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-semibold" asp-controller="Usuario" asp-action="Index">Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-semibold" asp-controller="Roles" asp-action="Index">Roles</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white fw-semibold" href="#">Préstamos</a>
@@ -57,6 +63,16 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables -->
+    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>

@@ -12,6 +12,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 
 //Las inyecciones de dependencias
 builder.Services.AddTransient<IUsuarioServices, UsuarioServices>();
+builder.Services.AddTransient<IRolServices, RolServices>();
 
 var app = builder.Build();
 
@@ -29,6 +30,12 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapStaticAssets();
+
+// Rutas personalizadas que se utilizan para ir la index de los diversos CRUD
+app.MapControllerRoute(
+    name: "roles",
+    pattern: "roles/{action=Index}/{id?}",
+    defaults: new { controller = "Roles" });
 
 app.MapControllerRoute(
     name: "default",

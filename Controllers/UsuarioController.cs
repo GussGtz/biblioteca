@@ -23,20 +23,23 @@ namespace BibliotecaSánchezLobatoGael83.Controllers
         [HttpGet]
         public IActionResult Crear()
         {
-            ViewBag.Roles = new SelectList(_usuarioServices.ObtenerRoles(), "PkRol", "Nombre");
+            // Obtiene la lista de roles y la asigna a ViewBag.Roles
+            ViewBag.Roles = new SelectList(_usuarioServices.GetRoles(), "PkRol", "Nombre");
             return View();
         }
 
         [HttpPost]
         public IActionResult Crear(Usuario request)
         {
-            if (!ModelState.IsValid)
+            // Elimina la validación del ModelState
+            bool resultado = _usuarioServices.CrearUsuario(request);
+            if (!resultado)
             {
-                ViewBag.Roles = new SelectList(_usuarioServices.ObtenerRoles(), "PkRol", "Nombre");
+                // Si no se pudo guardar, recarga la vista con los roles
+                ViewBag.Roles = new SelectList(_usuarioServices.GetRoles(), "PkRol", "Nombre");
                 return View(request);
             }
 
-            _usuarioServices.CrearUsuario(request);
             return RedirectToAction("Index");
         }
 
@@ -46,19 +49,15 @@ namespace BibliotecaSánchezLobatoGael83.Controllers
             var usuario = _usuarioServices.GetUsuarioById(id);
             if (usuario == null) return NotFound();
 
-            ViewBag.Roles = new SelectList(_usuarioServices.ObtenerRoles(), "PkRol", "Nombre", usuario.FKRol);
+            // Obtiene la lista de roles y la asigna a ViewBag.Roles
+            ViewBag.Roles = new SelectList(_usuarioServices.GetRoles(), "PkRol", "Nombre", usuario.FKRol);
             return View(usuario);
         }
 
         [HttpPost]
         public IActionResult Editar(Usuario request)
         {
-            if (!ModelState.IsValid)
-            {
-                ViewBag.Roles = new SelectList(_usuarioServices.ObtenerRoles(), "PkRol", "Nombre", request.FKRol);
-                return View(request);
-            }
-
+            // Elimina la validación del ModelState
             bool updated = _usuarioServices.EditarUsuario(request);
             if (!updated) return NotFound();
 

@@ -1,5 +1,11 @@
 ﻿@model BibliotecaSánchezLobatoGael83.Models.Domain.Usuario
 
+@{
+    Layout = "_LayoutDashboard";
+}
+
+<h1>Edicion de Usuario</h1>
+
 <div class="container-fluid">
     <div class="offset-12">
         <div class="card border">
@@ -32,8 +38,12 @@
 
                     </div>
 
-
-
+                    <div class="form-group">
+                        <label class="control-label">Rol</label>
+                        <select asp-for="FKRol" asp-items="ViewBag.Roles" class="select2-placeholder-multiple form-control">
+                            <option value="">-- Selecciona --</option>
+                        </select>
+                    </div>
 
                     <div class="form-group mt-3">
                         <button type="submit" class="btn btn-secondary d-block mx-auto"><i class="bi bi-person-fill"></i> Guardar</button>

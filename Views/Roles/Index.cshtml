@@ -1,0 +1,66 @@
+﻿@model List<BibliotecaSánchezLobatoGael83.Models.Domain.Rol>
+
+@{
+    Layout = "_LayoutDashboard";
+}
+
+<h1>
+    Roles
+</h1>
+
+<div class="row">
+    <div class="offset-10 col-3 mb-3">
+        <a asp-action="Crear" asp-controller="Roles" class="btn btn-success mx-auto">
+            <i class="fa-solid fa-user"></i> Nuevo
+        </a>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="offset-12">
+        <div class="card border">
+            <div class="card-header bg-dark">
+                <h1 class="text-white"><strong>Lista de roles</strong></h1>
+            </div>
+
+            <div class="card-body">
+                <div class="table-responsive">
+                    @if (Model.Count() > 0)
+                    {
+                        <table class="table table-bordered" id="tblRoles" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var rol in Model)
+                                {
+                                    <tr>
+                                        <td>@rol.Nombre</td>
+                                        <td>
+                                            <a class="btn btn-warning" asp-action="Editar" asp-route-id="@rol.PkRol">
+                                                <i class="fa-solid fa-pen-to-square"></i> Editar
+                                            </a>
+                                            <form asp-action="Eliminar" method="post" class="d-inline">
+                                                <input type="hidden" name="id" value="@rol.PkRol" />
+                                                <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de eliminar este rol?')">
+                                                    <i class="fa-solid fa-trash"></i> Eliminar
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <p>No hay registros</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

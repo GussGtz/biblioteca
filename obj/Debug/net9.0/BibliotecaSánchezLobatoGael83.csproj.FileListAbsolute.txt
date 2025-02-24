@@ -220,3 +220,4 @@ C:\Users\pochi\OneDrive\Desktop\BibliotecaSánchezLobatoGael83\obj\Debug\net9.0\
 C:\Users\pochi\OneDrive\Desktop\BibliotecaSánchezLobatoGael83\obj\Debug\net9.0\compressed\txa9cazfpq-yve10fzm9c.gz
 C:\Users\pochi\OneDrive\Desktop\BibliotecaSánchezLobatoGael83\obj\Debug\net9.0\compressed\1awsobzbch-yve10fzm9c.gz
 C:\Users\pochi\OneDrive\Desktop\BibliotecaSánchezLobatoGael83\obj\Debug\net9.0\compressed\p3oiroukyt-pu6onpw6v5.gz
+C:\Users\pochi\OneDrive\Desktop\BibliotecaSánchezLobatoGael83\obj\Debug\net9.0\BibliotecaSánchezLobatoGael83.sourcelink.json

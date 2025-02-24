@@ -37,7 +37,7 @@ namespace BibliotecaSánchezLobatoGael83.Services.Services
                     Nombre = request.Nombre,
                     UserName = request.UserName,
                     Password = request.Password,
-                    FKRol = 1
+                    FKRol = request.FKRol,
                 };
 
                 _context.Usuarios.Add(usuario);
@@ -79,6 +79,7 @@ namespace BibliotecaSánchezLobatoGael83.Services.Services
                 usuario.Nombre = request.Nombre;
                 usuario.UserName = request.UserName;
                 usuario.Password = request.Password;
+                usuario.FKRol = request.FKRol;
 
                 _context.Usuarios.Update(usuario);
                 return _context.SaveChanges() > 0;
@@ -105,11 +106,11 @@ namespace BibliotecaSánchezLobatoGael83.Services.Services
             }
         }
 
-        public List<Rol> ObtenerRoles()
+        public List<Rol> GetRoles()
         {
             try
             {
-                return _context.Roles.ToList();
+                return _context.Roles.ToList(); // Obtiene todos los roles de la base de datos
             }
             catch (Exception ex)
             {

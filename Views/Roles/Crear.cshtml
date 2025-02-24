@@ -1,0 +1,36 @@
+﻿@model BibliotecaSánchezLobatoGael83.Models.Domain.Rol
+
+@{
+    Layout = "_LayoutDashboard";
+}
+
+<h1>Crear Rol</h1>
+
+<div class="container-fluid">
+    <div class="offset-12">
+        <div class="card border">
+            <div class="card-header bg-dark">
+                <h1 class="text-white"><strong>Crear nuevo rol</strong></h1>
+            </div>
+
+            <div class="card-body">
+                <form asp-action="Crear" method="post">
+                    <div class="form-group">
+                        <label asp-for="Nombre" class="control-label"></label>
+                        <input asp-for="Nombre" class="form-control" placeholder="Ingresa el nombre del rol" />
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fa-solid fa-save"></i> Guardar
+                        </button>
+                        <a asp-action="Index" class="btn btn-secondary">
+                            <i class="fa-solid fa-arrow-left"></i> Cancelar
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

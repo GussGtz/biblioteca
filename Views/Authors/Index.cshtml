@@ -1,0 +1,242 @@
+﻿@model IEnumerable<BibliotecaSánchezLobatoGael83.Models.Domain.Author>
+
+@{
+    Layout = "_LayoutDashboard";
+}
+
+<h1 class="text-center mb-4">📚 Autores</h1>
+
+@if (User.IsInRole("Admin"))
+{
+    <div class="row">
+        <div class="offset-10 col-3 mb-3">
+            <a asp-action="Create" class="btn btn-success mx-auto">
+                <i class="fa-solid fa-user"></i> Nuevo Autor
+            </a>
+        </div>
+    </div>
+}
+
+<div class="container-fluid">
+    <div class="card border">
+        <div class="card-header bg-dark">
+            <h1 class="text-white"><strong>Lista de Autores</strong></h1>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                @if (Model != null && Model.Any())
+                {
+                    <table class="table table-hover table-striped">
+                        <thead class="table-header">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Fecha de Nacimiento</th>
+                                <th>Descripción</th>
+                                <th>Obras</th>
+                                <th>Origen</th>
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <th>Acciones</th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var author in Model)
+                            {
+                                <tr class="table-row">
+                                    <td>@author.Name_author</td>
+                                    <td>@author.Birth_date.ToShortDateString()</td>
+                                    <td>@author.Description_author</td>
+                                    <td>@author.Num_works</td>
+                                    <td>@author.Origin</td>
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <td>
+                                            <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@author.PkAuthor">
+                                                <i class="fa-solid fa-pen-to-square"></i> Editar
+                                            </a>
+                                            <form asp-action="Delete" method="post" style="display:inline;">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="id" value="@author.PkAuthor" />
+                                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de que quieres eliminar este autor?');">
+                                                    <i class="fa-solid fa-trash"></i> Eliminar
+                                                </button>
+                                            </form>
+                                        </td>
+                                    }
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p class="text-center text-muted">No hay autores registrados.</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sección específica para el rol User -->
+@if (User.IsInRole("User"))
+{
+    <div class="container-fluid mt-5">
+        <div class="card border">
+            <div class="card-header bg-dark">
+                <h1 class="text-white"><strong>📚 Autores destacados para ti</strong></h1>
+            </div>
+            <div class="card-body">
+                <div class="user-authors-grid">
+                    @foreach (var author in Model.Take(3))
+                    {
+                        <div class="user-author-card">
+                            <div class="user-author-card-header">
+                                <h4 class="user-author-card-title">@author.Name_author</h4>
+                            </div>
+                            <div class="user-author-card-body">
+                                <p class="user-author-card-text">
+                                    <strong>Fecha de Nacimiento:</strong> @author.Birth_date.ToShortDateString()<br>
+                                    <strong>Descripción:</strong> @author.Description_author<br>
+                                    <strong>Obras:</strong> @author.Num_works<br>
+                                    <strong>Origen:</strong> @author.Origin
+                                </p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<style>
+    .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+        background: linear-gradient(135deg, #343a40, #212529);
+        border-radius: 10px 10px 0 0;
+    }
+
+        .card-header h1 {
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+    /* Estilos para la tabla */
+    .table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 10px;
+    }
+
+    .table-header {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: white;
+    }
+
+        .table-header th {
+            padding: 15px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+    .table-row {
+        background: white;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+    }
+
+        .table-row:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .table-row td {
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+    /* Estilos para los botones de acciones */
+    .btn-sm {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        border-color: #ffc107;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+
+    .btn-warning:hover {
+        background-color: #e0a800;
+        border-color: #d39e00;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333;
+        border-color: #bd2130;
+    }
+
+    /* Estilos para el mensaje de "No hay autores" */
+    .text-muted {
+        font-size: 1.2rem;
+        color: #6c757d;
+    }
+
+    /* Estilos para la sección de usuario */
+    .user-authors-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .user-author-card {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .user-author-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+    .user-author-card-header {
+        background: #007bff;
+        padding: 15px;
+        color: white;
+    }
+
+    .user-author-card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .user-author-card-body {
+        padding: 15px;
+    }
+
+    .user-author-card-text {
+        font-size: 1rem;
+        color: #6c757d;
+        margin: 0;
+    }
+
+        .user-author-card-text strong {
+            color: #343a40;
+        }
+</style>

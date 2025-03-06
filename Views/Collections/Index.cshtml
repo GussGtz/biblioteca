@@ -1,0 +1,239 @@
+﻿@model IEnumerable<BibliotecaSánchezLobatoGael83.Models.Domain.Collection>
+
+@{
+    Layout = "_LayoutDashboard";
+}
+
+<h1 class="text-center mb-4">📚 Colecciones</h1>
+
+@if (User.IsInRole("Admin"))
+{
+    <div class="row">
+        <div class="offset-10 col-3 mb-3">
+            <a asp-action="Create" class="btn btn-success mx-auto">
+                <i class="fa-solid fa-plus"></i> Agregar Colección
+            </a>
+        </div>
+    </div>
+}
+
+<div class="container-fluid">
+    <div class="card border">
+        <div class="card-header bg-dark">
+            <h1 class="text-white"><strong>Lista de Colecciones</strong></h1>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                @if (Model != null && Model.Any())
+                {
+                    <table class="table table-hover table-striped">
+                        <thead class="table-header">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Autor</th>
+                                <th>Temática</th>
+                                <th>Piezas</th>
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <th>Acciones</th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr class="table-row">
+                                    <td>@item.Name_collection</td>
+                                    <td>@item.Authors.Name_author</td>
+                                    <td>@item.Topics.Name_topic</td>
+                                    <td>@item.Pieces</td>
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@item.PkCollection" class="btn btn-warning btn-sm">
+                                                <i class="fa-solid fa-pen-to-square"></i> Editar
+                                            </a>
+                                            <form asp-action="Delete" method="post" style="display:inline;">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="id" value="@item.PkCollection" />
+                                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de que quieres eliminar esta colección?');">
+                                                    <i class="fa-solid fa-trash"></i> Eliminar
+                                                </button>
+                                            </form>
+                                        </td>
+                                    }
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p class="text-center text-muted">No hay colecciones registradas.</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sección específica para el rol User -->
+@if (User.IsInRole("User"))
+{
+    <div class="container-fluid mt-5">
+        <div class="card border">
+            <div class="card-header bg-dark">
+                <h1 class="text-white"><strong>📚 Colecciones destacadas para ti</strong></h1>
+            </div>
+            <div class="card-body">
+                <div class="user-collections-grid">
+                    @foreach (var item in Model.Take(3))
+                    {
+                        <div class="user-collection-card">
+                            <div class="user-collection-card-header">
+                                <h4 class="user-collection-card-title">@item.Name_collection</h4>
+                            </div>
+                            <div class="user-collection-card-body">
+                                <p class="user-collection-card-text">
+                                    <strong>Autor:</strong> @item.Authors.Name_author<br>
+                                    <strong>Temática:</strong> @item.Topics.Name_topic<br>
+                                    <strong>Piezas:</strong> @item.Pieces
+                                </p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<style>
+    .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+        background: linear-gradient(135deg, #343a40, #212529);
+        border-radius: 10px 10px 0 0;
+    }
+
+        .card-header h1 {
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+    /* Estilos para la tabla */
+    .table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 10px;
+    }
+
+    .table-header {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: white;
+    }
+
+        .table-header th {
+            padding: 15px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+    .table-row {
+        background: white;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+    }
+
+        .table-row:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .table-row td {
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+    /* Estilos para los botones de acciones */
+    .btn-sm {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        border-color: #ffc107;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+
+    .btn-warning:hover {
+        background-color: #e0a800;
+        border-color: #d39e00;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333;
+        border-color: #bd2130;
+    }
+
+    /* Estilos para el mensaje de "No hay colecciones" */
+    .text-muted {
+        font-size: 1.2rem;
+        color: #6c757d;
+    }
+
+    /* Estilos para la sección de usuario */
+    .user-collections-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .user-collection-card {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .user-collection-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+    .user-collection-card-header {
+        background: #007bff;
+        padding: 15px;
+        color: white;
+    }
+
+    .user-collection-card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .user-collection-card-body {
+        padding: 15px;
+    }
+
+    .user-collection-card-text {
+        font-size: 1rem;
+        color: #6c757d;
+        margin: 0;
+    }
+
+        .user-collection-card-text strong {
+            color: #343a40;
+        }
+</style>

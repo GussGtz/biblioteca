@@ -1,0 +1,151 @@
+﻿@model dynamic
+
+@{
+    Layout = "_LayoutDashboard";
+}
+
+<div class="admin-dashboard">
+    <div class="dashboard-header">
+        <h1 class="dashboard-title">📊 Panel de Administración</h1>
+        <p class="dashboard-subtitle">Resumen general de la biblioteca</p>
+    </div>
+
+    <div class="dashboard-cards">
+        <div class="dashboard-card">
+            <div class="card-icon">
+                <i class="fas fa-book"></i>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Total de Libros</h3>
+                <p class="card-count">@Model.Books</p>
+            </div>
+        </div>
+
+        <div class="dashboard-card">
+            <div class="card-icon">
+                <i class="fas fa-user-edit"></i>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Total de Autores</h3>
+                <p class="card-count">@Model.Authors</p>
+            </div>
+        </div>
+
+        <div class="dashboard-card">
+            <div class="card-icon">
+                <i class="fas fa-tags"></i>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Total de Categorías</h3>
+                <p class="card-count">@Model.Topics</p>
+            </div>
+        </div>
+
+        <div class="dashboard-card">
+            <div class="card-icon">
+                <i class="fas fa-layer-group"></i>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Total de Colecciones</h3>
+                <p class="card-count">@Model.Collections</p>
+            </div>
+        </div>
+
+        <div class="dashboard-card">
+            <div class="card-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Total de Préstamos</h3>
+                <p class="card-count">@Model.UsuarioBooks</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Estilos generales */
+    .admin-dashboard {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Encabezado del dashboard */
+    .dashboard-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .dashboard-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #343a40;
+        margin-bottom: 10px;
+    }
+
+    .dashboard-subtitle {
+        font-size: 1.1rem;
+        color: #6c757d;
+    }
+
+    /* Tarjetas */
+    .dashboard-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .dashboard-card {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+    .card-icon {
+        font-size: 2.5rem;
+        color: #007bff;
+        margin-bottom: 15px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #343a40;
+        margin-bottom: 10px;
+    }
+
+    .card-count {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #007bff;
+        margin: 0;
+    }
+
+    /* Responsive */
+    @@media (max-width: 768px) {
+        .dashboard-cards {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+
+        .dashboard-title {
+            font-size: 2rem;
+        }
+
+        .card-count {
+            font-size: 2rem;
+        }
+    }
+</style>

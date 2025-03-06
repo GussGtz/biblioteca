@@ -1,0 +1,36 @@
+﻿@using BibliotecaSánchezLobatoGael83.Models.Domain
+@model BibliotecaSánchezLobatoGael83.Models.Domain.Usuario
+
+@{
+    Layout = "_LayoutDashboard";
+}
+
+<div class="container mt-4">
+    <h2>Editar Relación de Libros para @Model.Nombre</h2>
+    <form method="post">
+        <input type="hidden" name="usuarioId" value="@Model.PkUsuario" />
+
+        <div class="mb-3">
+            <label class="form-label">Selecciona los Libros</label>
+            <div style="border: 1px solid #ccc; padding: 10px; height: 400px; overflow-y: auto;">
+                @foreach (var libro in ViewBag.Libros as List<Book>)
+                {
+                    var isSelected = Model.UsuarioBooks.Any(ub => ub.FKBook == libro.PkBook);
+                    <div class="form-check">
+                        <input class="form-check-input"
+                               type="checkbox"
+                               name="selectedBooks"
+                               value="@libro.PkBook"
+                               id="libro-@libro.PkBook"
+                        @(isSelected ? "checked" : "") />
+                        <label class="form-check-label" for="libro-@libro.PkBook">
+                            @libro.Name_book
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Actualizar Relación</button>
+    </form>
+</div>

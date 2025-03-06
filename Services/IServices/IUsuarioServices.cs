@@ -10,6 +10,9 @@ namespace BibliotecaSánchezLobatoGael83.Services.IServices
         bool EditarUsuario(Usuario request);
         bool EliminarUsuario(int id);
         public List<Rol> GetRoles();
+        Usuario Login(string username, string password);
+        void Register(Usuario usuario);
+        string HashPassword(string password);
     }
 
 }

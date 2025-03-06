@@ -13,6 +13,7 @@ namespace BibliotecaSánchezLobatoGael83.Controllers
             _rolServices = rolServices;
         }
 
+        [CustomAuthorize(Roles = "Admin")]
         public IActionResult Index()
         {
             var roles = _rolServices.ObtenerRoles();
@@ -20,12 +21,14 @@ namespace BibliotecaSánchezLobatoGael83.Controllers
         }
 
         [HttpGet]
+        [CustomAuthorize(Roles = "Admin")]
         public IActionResult Crear()
         {
             return View();
         }
 
         [HttpPost]
+        [CustomAuthorize(Roles = "Admin")]
         public IActionResult Crear(Rol rol)
         {
             if (ModelState.IsValid)
@@ -37,6 +40,7 @@ namespace BibliotecaSánchezLobatoGael83.Controllers
         }
 
         [HttpGet]
+        [CustomAuthorize(Roles = "Admin")]
         public IActionResult Editar(int id)
         {
             var rol = _rolServices.GetRolById(id);
@@ -48,6 +52,7 @@ namespace BibliotecaSánchezLobatoGael83.Controllers
         }
 
         [HttpPost]
+        [CustomAuthorize(Roles = "Admin")]
         public IActionResult Editar(Rol rol)
         {
             if (ModelState.IsValid)
@@ -59,6 +64,7 @@ namespace BibliotecaSánchezLobatoGael83.Controllers
         }
 
         [HttpPost]
+        [CustomAuthorize(Roles = "Admin")]
         public IActionResult Eliminar(int id)
         {
             _rolServices.EliminarRol(id);

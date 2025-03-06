@@ -21,6 +21,7 @@ namespace BibliotecaSánchezLobatoGael83.Controllers
         }
 
         [HttpGet]
+        [CustomAuthorize(Roles = "Admin")]
         public IActionResult Crear()
         {
             // Obtiene la lista de roles y la asigna a ViewBag.Roles
@@ -29,6 +30,7 @@ namespace BibliotecaSánchezLobatoGael83.Controllers
         }
 
         [HttpPost]
+        [CustomAuthorize(Roles = "Admin")]
         public IActionResult Crear(Usuario request)
         {
             // Elimina la validación del ModelState
@@ -44,6 +46,7 @@ namespace BibliotecaSánchezLobatoGael83.Controllers
         }
 
         [HttpGet]
+        [CustomAuthorize(Roles = "Admin")]
         public IActionResult Editar(int id)
         {
             var usuario = _usuarioServices.GetUsuarioById(id);
@@ -55,6 +58,7 @@ namespace BibliotecaSánchezLobatoGael83.Controllers
         }
 
         [HttpPost]
+        [CustomAuthorize(Roles = "Admin")]
         public IActionResult Editar(Usuario request)
         {
             // Elimina la validación del ModelState
@@ -64,11 +68,26 @@ namespace BibliotecaSánchezLobatoGael83.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
+        [HttpPost] // Cambia HttpPost a HttpDelete
+        [CustomAuthorize(Roles = "Admin")]
         public IActionResult Eliminar(int id)
         {
-            bool deleted = _usuarioServices.EliminarUsuario(id);
-            if (!deleted) return NotFound();
+            try
+            {
+                bool deleted = _usuarioServices.EliminarUsuario(id);
+                if (!deleted)
+                {
+                    TempData["Message"] = "No se pudo eliminar el usuario.";
+                }
+                else
+                {
+                    TempData["Message"] = "Usuario eliminado correctamente.";
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["Message"] = "Error al eliminar el usuario: " + ex.Message;
+            }
 
             return RedirectToAction("Index");
         }

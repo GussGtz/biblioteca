@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BibliotecaSánchezLobatoGael83.yve10fzm9c.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-YrLtp0UMtdHWzZ9iKrdvvRZ\u002BPUpCM6ovo0NYT/kSlFw="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2305"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022YrLtp0UMtdHWzZ9iKrdvvRZ\u002BPUpCM6ovo0NYT/kSlFw=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Feb 2025 02:00:46 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2305"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022YrLtp0UMtdHWzZ9iKrdvvRZ\u002BPUpCM6ovo0NYT/kSlFw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 04 Mar 2025 17:15:16 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BibliotecaSánchezLobatoGael83/BibliotecaSánchezLobatoGael83.yve10fzm9c.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BibliotecaSánchezLobatoGael83.yve10fzm9c.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"yve10fzm9c"},{"Name":"integrity","Value":"sha256-YrLtp0UMtdHWzZ9iKrdvvRZ\u002BPUpCM6ovo0NYT/kSlFw="},{"Name":"label","Value":"_content/BibliotecaS\u00E1nchezLobatoGael83/BibliotecaS\u00E1nchezLobatoGael83.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2305"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022YrLtp0UMtdHWzZ9iKrdvvRZ\u002BPUpCM6ovo0NYT/kSlFw=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Feb 2025 02:00:46 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2305"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022YrLtp0UMtdHWzZ9iKrdvvRZ\u002BPUpCM6ovo0NYT/kSlFw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 04 Mar 2025 17:15:16 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BibliotecaSánchezLobatoGael83/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>

@@ -1,0 +1,37 @@
+﻿@model BibliotecaSánchezLobatoGael83.Models.Domain.Author
+
+@{
+    Layout = "_LayoutDashboard";
+}
+
+<h1>Editar Autor</h1>
+
+<div class="container-fluid">
+    <div class="card border">
+        <div class="card-header bg-dark text-white">
+            <h2>Editar Autor</h2>
+        </div>
+        <div class="card-body">
+            <form asp-action="Edit" method="post">
+                <input type="hidden" asp-for="PkAuthor" />
+                <div class="form-group">
+                    <label asp-for="Name_author"></label>
+                    <input asp-for="Name_author" class="form-control" required />
+                    <label asp-for="Birth_date"></label>
+                    <input asp-for="Birth_date" class="form-control" type="date" required />
+                    <label asp-for="Description_author"></label>
+                    <input asp-for="Description_author" class="form-control" required />
+                    <label asp-for="Num_works"></label>
+                    <input asp-for="Num_works" class="form-control" type="number" required />
+                    <label asp-for="Origin"></label>
+                    <input asp-for="Origin" class="form-control" required />
+                </div>
+
+                <div class="form-group mt-3">
+                    <button type="submit" class="btn btn-success">Guardar</button>
+                    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

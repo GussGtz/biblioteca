@@ -14,5 +14,10 @@ namespace BibliotecaSánchezLobatoGael83.Models.Domain
         [ForeignKey("Roles")]
         public int FKRol {  get; set; }
         public Rol Roles { get; set; }
+        public DateTime Added_on { get; set; }
+        public DateTime Updated_on { get; set; }
+
+        // Relación con la tabla pivote
+        public ICollection<UsuarioBook> UsuarioBooks { get; set; }
     }
 }

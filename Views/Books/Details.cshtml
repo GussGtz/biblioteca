@@ -1,0 +1,107 @@
+﻿@model BibliotecaSánchezLobatoGael83.Models.Domain.Book
+
+@{
+    Layout = "_LayoutDashboard";
+}
+
+<h2 class="text-center mb-4">📖 Detalles del Libro</h2>
+
+<div class="book-details-container">
+    <div class="book-details-card">
+        <div class="book-details-header">
+            <h3 class="book-title">@Model.Name_book</h3>
+        </div>
+        <div class="book-details-body">
+            <div class="book-details-item">
+                <span class="book-details-label">Autor:</span>
+                <span class="book-details-value">@Model.Authors.Name_author</span>
+            </div>
+            <div class="book-details-item">
+                <span class="book-details-label">Categoría:</span>
+                <span class="book-details-value">@Model.Topics.Name_topic</span>
+            </div>
+            <div class="book-details-item">
+                <span class="book-details-label">Colección:</span>
+                <span class="book-details-value">@Model.Collections.Name_collection</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-4">
+    <a href="@Url.Action("IndexBook", "Books")" class="btn btn-secondary">Volver</a>
+</div>
+
+<style>
+    /* Estilos para el contenedor de detalles del libro */
+    .book-details-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Estilos para la tarjeta de detalles */
+    .book-details-card {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .book-details-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+    /* Estilos para el encabezado de la tarjeta */
+    .book-details-header {
+        background: #007bff;
+        padding: 20px;
+        color: white;
+        text-align: center;
+    }
+
+    .book-title {
+        font-size: 1.75rem;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    /* Estilos para el cuerpo de la tarjeta */
+    .book-details-body {
+        padding: 20px;
+    }
+
+    /* Estilos para cada ítem de detalles */
+    .book-details-item {
+        margin-bottom: 15px;
+    }
+
+    .book-details-label {
+        font-weight: bold;
+        color: #343a40;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .book-details-value {
+        color: #6c757d;
+        font-size: 1.1rem;
+    }
+
+    /* Estilos para el botón de volver */
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+        padding: 10px 20px;
+        font-size: 1rem;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+</style>

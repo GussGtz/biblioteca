@@ -28,5 +28,10 @@ namespace BibliotecaSánchezLobatoGael83.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        public IActionResult NotFound()
+        {
+            Response.StatusCode = 404;  // Establece el código de estado HTTP a 404
+            return View();  // Devuelve la vista "NotFound.cshtml"
+        }
     }
 }

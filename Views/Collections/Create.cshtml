@@ -1,0 +1,27 @@
+﻿@model BibliotecaSánchezLobatoGael83.Models.Domain.Collection
+
+@{
+    Layout = "_LayoutDashboard";
+}
+
+<h2>Create Collection</h2>
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Name_collection">Nombre de la coleccion</label>
+        <input asp-for="Name_collection" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="FKAuthor">Autor</label>
+        <select asp-for="FKAuthor" asp-items="ViewBag.Authors" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="FKTopic">Tematica</label>
+        <select asp-for="FKTopic" asp-items="ViewBag.Topics" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Pieces">Numero de piezas</label>
+        <input asp-for="Pieces" class="form-control" type="number" />
+    </div>
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

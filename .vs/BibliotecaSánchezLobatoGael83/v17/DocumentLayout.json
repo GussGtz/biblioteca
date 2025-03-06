@@ -3,68 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\models\\domain\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:models\\domain\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\models\\domain\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:models\\domain\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\views\\usuario\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:views\\usuario\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\views\\usuario\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:views\\usuario\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\views\\roles\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:views\\roles\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\views\\shared\\_layoutdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:views\\shared\\_layoutdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\services\\services\\usuarioservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:services\\services\\usuarioservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\views\\roles\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:views\\roles\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\views\\roles\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:views\\roles\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\services\\services\\rolservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:services\\services\\rolservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\services\\iservices\\iroleservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:services\\iservices\\iroleservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|c:\\users\\pochi\\onedrive\\desktop\\bibliotecas\u00E1nchezlobatogael83\\services\\iservices\\iusuarioservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84B089A0-B9B1-464D-A972-3DDD03567D68}|BibliotecaS\u00E1nchezLobatoGael83.csproj|solutionrelative:services\\iservices\\iusuarioservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,202 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Editar.cshtml",
-              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Views\\Roles\\Editar.cshtml",
-              "RelativeDocumentMoniker": "Views\\Roles\\Editar.cshtml",
-              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Views\\Roles\\Editar.cshtml",
-              "RelativeToolTip": "Views\\Roles\\Editar.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-19T23:29:36.988Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Crear.cshtml",
-              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Views\\Roles\\Crear.cshtml",
-              "RelativeDocumentMoniker": "Views\\Roles\\Crear.cshtml",
-              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Views\\Roles\\Crear.cshtml",
-              "RelativeToolTip": "Views\\Roles\\Crear.cshtml",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAcwCMAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-19T23:28:52.048Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Views\\Roles\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Roles\\Index.cshtml",
-              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Views\\Roles\\Index.cshtml",
-              "RelativeToolTip": "Views\\Roles\\Index.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAAMAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-19T23:26:49.975Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "RolesController.cs",
-              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Controllers\\RolesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RolesController.cs",
-              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Controllers\\RolesController.cs",
-              "RelativeToolTip": "Controllers\\RolesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T23:24:58.043Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "RolServices.cs",
-              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Services\\Services\\RolServices.cs",
-              "RelativeDocumentMoniker": "Services\\Services\\RolServices.cs",
-              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Services\\Services\\RolServices.cs",
-              "RelativeToolTip": "Services\\Services\\RolServices.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAgwEkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T23:24:07.164Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IRoleServices.cs",
-              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Services\\IServices\\IRoleServices.cs",
-              "RelativeDocumentMoniker": "Services\\IServices\\IRoleServices.cs",
-              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Services\\IServices\\IRoleServices.cs",
-              "RelativeToolTip": "Services\\IServices\\IRoleServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T23:22:30.279Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T23:16:45.7Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_LayoutDashboard.cshtml",
-              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Views\\Shared\\_LayoutDashboard.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutDashboard.cshtml",
-              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Views\\Shared\\_LayoutDashboard.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_LayoutDashboard.cshtml",
-              "ViewState": "AgIAACIAAAAAAAAAAAAkwEsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-19T23:13:25.675Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Views\\Usuario\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Usuario\\Index.cshtml",
-              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Views\\Usuario\\Index.cshtml",
-              "RelativeToolTip": "Views\\Usuario\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHsAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-19T23:12:43.676Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Editar.cshtml",
-              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Views\\Usuario\\Editar.cshtml",
-              "RelativeDocumentMoniker": "Views\\Usuario\\Editar.cshtml",
-              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Views\\Usuario\\Editar.cshtml",
-              "RelativeToolTip": "Views\\Usuario\\Editar.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAAYAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-19T22:42:41.352Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Rol.cs",
-              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Models\\Domain\\Rol.cs",
-              "RelativeDocumentMoniker": "Models\\Domain\\Rol.cs",
-              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Models\\Domain\\Rol.cs",
-              "RelativeToolTip": "Models\\Domain\\Rol.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T22:10:21.395Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-05T13:32:36.008Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Models\\Domain\\Usuario.cs",
-              "RelativeDocumentMoniker": "Models\\Domain\\Usuario.cs",
-              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Models\\Domain\\Usuario.cs",
-              "RelativeToolTip": "Models\\Domain\\Usuario.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAuwBIAAAAAAAAAAAAAAA==",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Context\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Context\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Context\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Context\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowCgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T22:10:19.013Z",
+              "WhenOpened": "2025-03-03T15:46:06.648Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UsuarioServices.cs",
-              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Services\\Services\\UsuarioServices.cs",
-              "RelativeDocumentMoniker": "Services\\Services\\UsuarioServices.cs",
-              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Services\\Services\\UsuarioServices.cs",
-              "RelativeToolTip": "Services\\Services\\UsuarioServices.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAArwDQAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAI0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T22:10:06.379Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IUsuarioServices.cs",
-              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Services\\IServices\\IUsuarioServices.cs",
-              "RelativeDocumentMoniker": "Services\\IServices\\IUsuarioServices.cs",
-              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Services\\IServices\\IUsuarioServices.cs",
-              "RelativeToolTip": "Services\\IServices\\IUsuarioServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T22:10:04.455Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Crear.cshtml",
-              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Views\\Usuario\\Crear.cshtml",
-              "RelativeDocumentMoniker": "Views\\Usuario\\Crear.cshtml",
-              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Views\\Usuario\\Crear.cshtml",
-              "RelativeToolTip": "Views\\Usuario\\Crear.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-19T22:09:15.681Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\pochi\\OneDrive\\Desktop\\BibliotecaS\u00E1nchezLobatoGael83\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAYwEIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T22:06:17.368Z"
+              "WhenOpened": "2025-02-19T23:16:45.7Z",
+              "EditorCaption": ""
             }
           ]
         },

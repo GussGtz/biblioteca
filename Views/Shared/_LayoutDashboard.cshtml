@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,28 +28,54 @@
             <nav class="col-md-3 col-lg-2 d-md-block text-white min-vh-100 p-3" style="background-color: #13185B;">
                 <h4 class="text-center border-bottom pb-2">Menú</h4>
                 <ul class="nav flex-column">
+                    <!-- Menú Visible para User y Guest -->
+                    @if (User.IsInRole("User") || User.IsInRole("Guest") || User.IsInRole("Admin"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-semibold" asp-controller="Books" asp-action="IndexBook">Inicio</a>
+                        </li>
+                    }
+
+                    <!-- Menú Visible solo para Admin -->
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-semibold" asp-controller="Books" asp-action="Dashboard">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-semibold" asp-controller="Books" asp-action="Index">Libros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-semibold" asp-controller="Roles" asp-action="Index">Roles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-semibold" asp-controller="Usuario" asp-action="Index">Usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-semibold" asp-controller="UsuarioBook" asp-action="Index">Préstamos</a>
+                        </li>
+                    }
+
+                    <!-- Menú Visible para Admin y User -->
+                    @if (User.IsInRole("Admin") || User.IsInRole("User"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-semibold" asp-controller="Collections" asp-action="Index">Colecciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-semibold" asp-controller="Authors" asp-action="Index">Autores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-semibold" asp-controller="Topics" asp-action="Index">Temáticas</a>
+                        </li>
+                    }
+
+                    <!-- Botón de Cerrar Sesión -->
                     <li class="nav-item">
-                        <a class="nav-link text-white fw-semibold" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white fw-semibold" href="#">Libros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white fw-semibold" href="#">Colecciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white fw-semibold" asp-controller="Usuario" asp-action="Index">Usuarios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white fw-semibold" asp-controller="Roles" asp-action="Index">Roles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white fw-semibold" href="#">Préstamos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white fw-semibold" href="#">Configuración</a>
+                        <button id="logoutBtn" class="btn btn-light fw-semibold w-100">Cerrar Sesión</button>
                     </li>
                 </ul>
+
             </nav>
 
             <!-- Contenido Principal -->
@@ -66,6 +92,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- DataTables -->
@@ -73,6 +100,37 @@
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <!-- SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Script para manejar el Logout -->
+    <script>
+        document.getElementById("logoutBtn").addEventListener("click", function () {
+            Swal.fire({
+                title: "¿Seguro que quieres cerrar sesión?",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#d33",
+                cancelButtonColor: "#3085d6",
+                confirmButtonText: "Sí, cerrar sesión"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Elimina el token de localStorage y sessionStorage
+                    localStorage.removeItem("token");
+                    sessionStorage.removeItem("token");
+
+                    // Borra la cookie del token
+                    document.cookie = "JwtToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+                    // Enviar petición al backend para cerrar sesión
+                    fetch('/Auth/Logout', { method: 'POST' })
+                        .then(response => {
+                            // Redirige al Login después de cerrar sesión
+                            window.location.href = '/';
+                        });
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

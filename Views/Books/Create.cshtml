@@ -1,0 +1,68 @@
+﻿@model BibliotecaSánchezLobatoGael83.Models.Domain.Book
+
+@{
+    Layout = "_LayoutDashboard";
+}
+
+<h1>Nuevo Libro</h1>
+
+<div class="container-fluid">
+    <div class="card border">
+        <div class="card-header bg-dark">
+            <h1 class="text-white"><strong>Agregar un nuevo libro</strong></h1>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create" method="post">
+                <div class="form-group">
+                    <label asp-for="Name_book" class="control-label"></label>
+                    <input asp-for="Name_book" class="form-control" placeholder="Nombre del libro" />
+                    <span asp-validation-for="Name_book" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="FKAuthors" class="control-label">Autor</label>
+                    <select asp-for="FKAuthors" class="form-control" asp-items="ViewBag.Authors"></select>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="FKCollection" class="control-label">Colección</label>
+                    <select asp-for="FKCollection" class="form-control" asp-items="ViewBag.Collections"></select>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="FKTopic" class="control-label">Tema</label>
+                    <select asp-for="FKTopic" class="form-control" asp-items="ViewBag.Topics"></select>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Year_published" class="control-label">Año de publicación</label>
+                    <input asp-for="Year_published" class="form-control" type="date" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Num_pages" class="control-label">Numero de paginas</label>
+                    <input asp-for="Num_pages" class="form-control" placeholder="Número de páginas" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Stock" class="control-label">Cantidad</label>
+                    <input asp-for="Stock" class="form-control" placeholder="Cantidad en stock" />
+                </div>
+
+                <div class="form-check">
+                    <input asp-for="Sold_out" class="form-check-input" />
+                    <label asp-for="Sold_out" class="form-check-label">Agotado</label>
+                </div>
+
+                <div class="form-group mt-3">
+                    <button type="submit" class="btn btn-success">
+                        <i class="fa-solid fa-save"></i> Guardar
+                    </button>
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="fa-solid fa-arrow-left"></i> Cancelar
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

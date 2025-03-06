@@ -1,0 +1,38 @@
+﻿@model BibliotecaSánchezLobatoGael83.Models.Domain.Topic
+
+@{
+    Layout = "_LayoutDashboard";
+}
+
+<h1>Editar Tematica</h1>
+
+<div class="container-fluid">
+    <div class="offset-12">
+        <div class="card border">
+            <div class="card-header bg-dark">
+                <h1 class="text-white"><strong>Editar topic</strong></h1>
+            </div>
+
+            <div class="card-body">
+                <form asp-action="Editar" method="post">
+                    <input type="hidden" asp-for="PkTopic" />
+
+                    <div class="form-group">
+                        <label asp-for="Name_topic" class="control-label"></label>
+                        <input asp-for="Name_topic" class="form-control" placeholder="Ingresa el nombre del topic" />
+                        <span asp-validation-for="Name_topic" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fa-solid fa-save"></i> Guardar
+                        </button>
+                        <a asp-action="Index" class="btn btn-secondary">
+                            <i class="fa-solid fa-arrow-left"></i> Cancelar
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

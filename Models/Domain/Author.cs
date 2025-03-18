@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BibliotecaSánchezLobatoGael83.Models.Domain
+namespace BibliotecaGustavoGtz.Models.Domain
 {
     public class Author
     {

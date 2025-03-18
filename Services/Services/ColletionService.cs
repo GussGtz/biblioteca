@@ -1,10 +1,10 @@
-﻿using BibliotecaSánchezLobatoGael83.Context;
-using BibliotecaSánchezLobatoGael83.Models.Domain;
+﻿using BibliotecaGustavoGtz.Context;
+using BibliotecaGustavoGtz.Models.Domain;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace BibliotecaSánchezLobatoGael83.Services
+namespace BibliotecaGustavoGtz.Services
 {
     public class CollectionService : ICollectionService
     {

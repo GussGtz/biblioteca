@@ -1,9 +1,9 @@
-﻿using BibliotecaSánchezLobatoGael83.Models;
-using BibliotecaSánchezLobatoGael83.Services;
+﻿using BibliotecaGustavoGtz.Models;
+using BibliotecaGustavoGtz.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
-namespace BibliotecaSánchezLobatoGael83.Controllers
+namespace BibliotecaGustavoGtz.Controllers
 {
     public class UsuarioBookController : Controller
     {

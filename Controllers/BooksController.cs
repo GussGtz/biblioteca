@@ -1,14 +1,14 @@
-﻿using BibliotecaSánchezLobatoGael83.Models.Domain;
-using BibliotecaSánchezLobatoGael83.Services;
-using BibliotecaSánchezLobatoGael83.Services.Interfaces;
-using BibliotecaSánchezLobatoGael83.Services.IServices;
+﻿using BibliotecaGustavoGtz.Models.Domain;
+using BibliotecaGustavoGtz.Services;
+using BibliotecaGustavoGtz.Services.Interfaces;
+using BibliotecaGustavoGtz.Services.IServices;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace BibliotecaSánchezLobatoGael83.Controllers
+namespace BibliotecaGustavoGtz.Controllers
 {
     [Authorize]
     public class BooksController : Controller

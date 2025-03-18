@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BibliotecaSánchezLobatoGael83.Models.Domain.Book>
+﻿@model IEnumerable<BibliotecaGustavoGtz.Models.Domain.Book>
 
 @{
     Layout = "_LayoutDashboard";
@@ -8,72 +8,42 @@
     @foreach (var book in Model)
     {
         <div class="col-md-4 mb-4">
-            <div class="card text-center d-flex flex-column align-items-center p-3 shadow-lg"
-                 style="border-radius: 15px; border: none; transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                <div class="d-flex justify-content-center align-items-center" style="height: 200px; width: 100%;">
-                    <img src="https://imgs.search.brave.com/tgqDxz3-sYyWTOhlArY8nGW5WRn2ggO4ySgs0al3cOA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTgz/ODkwMjY0L2VzL2Zv/dG8vdmVydGljYWwt/ZWwtbGlicm8tcm9q/by1jb24tdHJhemFk/by1kZS1yZWNvcnRl/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1ZUk90OXRJV0Ez/MmoyU0VkTEJ2SFR5/MEJuM3A3MmJkWEMz/VWdhVFZfT01JPQ"
-                         class="img-fluid"
-                         style="max-width: 70%; max-height: 100%; object-fit: contain; border-radius: 10px;"
-                         alt="Imagen de libro">
-                </div>
-                <div class="card-body d-flex flex-column align-items-center text-center">
-                    <h5 class="card-title" style="font-size: 1.25rem; font-weight: bold; color: #343a40;">@book.Name_book</h5>
-                    <p class="card-text" style="font-size: 0.9rem; color: #6c757d;">Autor: @book.Authors.Name_author</p>
-                    <p class="card-text" style="font-size: 0.9rem; color: #6c757d;">Categoría: @book.Topics.Name_topic</p>
+            <!-- Card with image at the top -->
+            <div class="card mb-3">
+                <img class="card-img-top" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYHoo0-g0iC387H1SH3xTW15-BKLSkAAPD_53x3tVMR4TufCoceo6A5KXzhb_s2idB7OyqJlIs0r6aYv8zyJ8aNypPOEeXdEPx4XyRV1f8AhjUjUwChacp9NXNGRrhZ3fvRviIQwLqdIsX/s1600/libro.png"
+                     alt="Imagen de libro"
+                     class="card-img-top"
+                     style="object-fit: cover; height: 210px;">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 1.5rem; font-weight: 600; color: #2c3e50;">@book.Name_book</h5>
+                    <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Autor: @book.Authors.Name_author</p>
+                    <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Categoría: @book.Topics.Name_topic</p>
                     <a href="@Url.Action("Details", "Books", new { id = book.PkBook })"
-                       class="btn btn-primary mt-auto"
-                       style="background: linear-gradient(135deg, #007bff, #0056b3); border: none; border-radius: 8px; padding: 8px 20px; font-size: 0.9rem; transition: background 0.3s ease, transform 0.3s ease;">
+                       class="btn btn-secondary"
+                       style="background-color: #33ff42; border: none; border-radius: 10px; padding: 12px 25px; font-size: 1rem; transition: background-color 0.4s ease, transform 0.3s ease;">
                         Detalles
                     </a>
                 </div>
+            </div>
+
+            <!-- Card with image at the bottom -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 1.5rem; font-weight: 600; color: #2c3e50;">@book.Name_book</h5>
+                    <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Autor: @book.Authors.Name_author</p>
+                    <p class="card-text" style="font-size: 1rem; color: #7f8c8d;">Categoría: @book.Topics.Name_topic</p>
+                    <a href="@Url.Action("Details", "Books", new { id = book.PkBook })"
+                       class="btn btn-secondary"
+                       style="background-color: #33ff42; border: none; border-radius: 10px; padding: 12px 25px; font-size: 1rem; transition: background-color 0.4s ease, transform 0.3s ease;">
+                        Detalles
+                    </a>
+                </div>
+                <img class="card-img-bottom" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYHoo0-g0iC387H1SH3xTW15-BKLSkAAPD_53x3tVMR4TufCoceo6A5KXzhb_s2idB7OyqJlIs0r6aYv8zyJ8aNypPOEeXdEPx4XyRV1f8AhjUjUwChacp9NXNGRrhZ3fvRviIQwLqdIsX/s1600/libro.png"
+                     alt="Imagen de libro"
+                     class="card-img-bottom"
+                     style="object-fit: cover; height: 210px;">
             </div>
         </div>
     }
 </div>
 
-<style>
-    .card {
-        background: #fff;
-        border: none;
-        border-radius: 15px;
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-    .card-title {
-        font-size: 1.25rem;
-        font-weight: bold;
-        color: #343a40;
-        margin-bottom: 10px;
-    }
-
-    .card-text {
-        font-size: 0.9rem;
-        color: #6c757d;
-        margin-bottom: 5px;
-    }
-
-    .btn-primary {
-        background: linear-gradient(135deg, #007bff, #0056b3);
-        border: none;
-        border-radius: 8px;
-        padding: 8px 20px;
-        font-size: 0.9rem;
-        color: #fff;
-        transition: background 0.3s ease, transform 0.3s ease;
-    }
-
-        .btn-primary:hover {
-            background: linear-gradient(135deg, #0056b3, #007bff);
-            transform: translateY(-2px);
-        }
-
-    .shadow-lg {
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    }
-</style>

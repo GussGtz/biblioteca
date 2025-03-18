@@ -1,8 +1,8 @@
-﻿using BibliotecaSánchezLobatoGael83.Models.Domain;
+﻿using BibliotecaGustavoGtz.Models.Domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace BibliotecaSánchezLobatoGael83.Context
+namespace BibliotecaGustavoGtz.Context
 {
     public class ApplicationDbContext : DbContext
     {
@@ -27,10 +27,10 @@ namespace BibliotecaSánchezLobatoGael83.Context
             modelBuilder.Entity<Usuario>().HasData(
                 new Usuario
                 {
-                    PkUsuario = 1,
-                    Nombre = "Gael Lobato",
-                    UserName = "lobato",
-                    Password = "qwerty",
+                    PkUsuario = 1004,
+                    Nombre = "Gus",
+                    UserName = "Admin1",
+                    Password = passwordHasher.HashPassword(null, "12345"), // Hashear correctamente "12345"
                     FKRol = 1
                 }
             );

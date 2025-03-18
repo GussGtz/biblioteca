@@ -3,36 +3,68 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - BibliotecaSánchezLobatoGael83</title>
+    <title>@ViewData["Title"] - BibliotecaGustavoGtz</title>
 
     <style>
         /* Estilo de hover para los enlaces dentro de li */
         .nav-item:hover {
-            background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco y transparente */
+            background-color: #080a08(255, 255, 255, 0.7); /* Fondo blanco y transparente */
         }
 
             .nav-item:hover .nav-link {
-                color: #13185B !important; /* Cambiar el color de texto a #13185B */
+                color: #080a08 !important; /* Cambiar el color de texto a #13185B */
+            }
+
+        /* Estilo del sidebar verde */
+        .sidebar {
+            background-color: #e6eee6; 
+            color: #080a08;
+            min-height: 100vh;
+        }
+
+            .sidebar h4 {
+                border-bottom: 2px solid #080a08;
+                padding-bottom: 10px;
+            }
+
+        .nav-link {
+            font-weight: 600;
+            color: #080a08;
+        }
+
+            .nav-link:hover {
+                background-color: #3e8e41; /* Verde más oscuro al hacer hover */
+            }
+
+        /* Botón de Cerrar sesión */
+        #logoutBtn {
+            font-weight: 600;
+            background-color: #f44336; /* Rojo para cerrar sesión */
+            color: #080a08;
+        }
+
+            #logoutBtn:hover {
+                background-color: #d32f2f; /* Rojo oscuro al hacer hover */
             }
     </style>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/BibliotecaSánchezLobatoGael83.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BibliotecaGustavoGtz.styles.css" asp-append-version="true" />
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
-            <nav class="col-md-3 col-lg-2 d-md-block text-white min-vh-100 p-3" style="background-color: #13185B;">
-                <h4 class="text-center border-bottom pb-2">Menú</h4>
+            <nav class="col-md-3 col-lg-2 d-md-block sidebar p-3">
+                <h4 class="text-center">Menú</h4>
                 <ul class="nav flex-column">
                     <!-- Menú Visible para User y Guest -->
                     @if (User.IsInRole("User") || User.IsInRole("Guest") || User.IsInRole("Admin"))
                     {
                         <li class="nav-item">
-                            <a class="nav-link text-white fw-semibold" asp-controller="Books" asp-action="IndexBook">Inicio</a>
+                            <a class="nav-link" asp-controller="Books" asp-action="IndexBook">Inicio</a>
                         </li>
                     }
 
@@ -40,19 +72,19 @@
                     @if (User.IsInRole("Admin"))
                     {
                         <li class="nav-item">
-                            <a class="nav-link text-white fw-semibold" asp-controller="Books" asp-action="Dashboard">Dashboard</a>
+                            <a class="nav-link" asp-controller="Books" asp-action="Dashboard">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white fw-semibold" asp-controller="Books" asp-action="Index">Libros</a>
+                            <a class="nav-link" asp-controller="Books" asp-action="Index">Libros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white fw-semibold" asp-controller="Roles" asp-action="Index">Roles</a>
+                            <a class="nav-link" asp-controller="Roles" asp-action="Index">Roles</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white fw-semibold" asp-controller="Usuario" asp-action="Index">Usuarios</a>
+                            <a class="nav-link" asp-controller="Usuario" asp-action="Index">Usuarios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white fw-semibold" asp-controller="UsuarioBook" asp-action="Index">Préstamos</a>
+                            <a class="nav-link" asp-controller="UsuarioBook" asp-action="Index">Préstamos</a>
                         </li>
                     }
 
@@ -60,22 +92,21 @@
                     @if (User.IsInRole("Admin") || User.IsInRole("User"))
                     {
                         <li class="nav-item">
-                            <a class="nav-link text-white fw-semibold" asp-controller="Collections" asp-action="Index">Colecciones</a>
+                            <a class="nav-link" asp-controller="Collections" asp-action="Index">Colecciones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white fw-semibold" asp-controller="Authors" asp-action="Index">Autores</a>
+                            <a class="nav-link" asp-controller="Authors" asp-action="Index">Autores</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white fw-semibold" asp-controller="Topics" asp-action="Index">Temáticas</a>
+                            <a class="nav-link" asp-controller="Topics" asp-action="Index">Temáticas</a>
                         </li>
                     }
 
                     <!-- Botón de Cerrar Sesión -->
                     <li class="nav-item">
-                        <button id="logoutBtn" class="btn btn-light fw-semibold w-100">Cerrar Sesión</button>
+                        <button id="logoutBtn" class="btn w-100">Cerrar Sesión</button>
                     </li>
                 </ul>
-
             </nav>
 
             <!-- Contenido Principal -->

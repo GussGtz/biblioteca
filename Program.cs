@@ -1,9 +1,9 @@
-using BibliotecaSánchezLobatoGael83.Context;
-using BibliotecaSánchezLobatoGael83.Middleware;
-using BibliotecaSánchezLobatoGael83.Services;
-using BibliotecaSánchezLobatoGael83.Services.Interfaces;
-using BibliotecaSánchezLobatoGael83.Services.IServices;
-using BibliotecaSánchezLobatoGael83.Services.Services;
+using BibliotecaGustavoGtz.Context;
+using BibliotecaGustavoGtz.Middleware;
+using BibliotecaGustavoGtz.Services;
+using BibliotecaGustavoGtz.Services.Interfaces;
+using BibliotecaGustavoGtz.Services.IServices;
+using BibliotecaGustavoGtz.Services.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 

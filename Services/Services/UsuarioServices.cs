@@ -1,8 +1,9 @@
-﻿using BibliotecaSánchezLobatoGael83.Context;
-using BibliotecaSánchezLobatoGael83.Models.Domain;
-using BibliotecaSánchezLobatoGael83.Services.IServices;
+﻿using BibliotecaGustavoGtz.Context;
+using BibliotecaGustavoGtz.Models.Domain;
+using BibliotecaGustavoGtz.Services.IServices;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 public class UsuarioServices : IUsuarioServices
 {
@@ -19,12 +20,11 @@ public class UsuarioServices : IUsuarioServices
     {
         try
         {
-            List<Usuario> result = _context.Usuarios.Include(x => x.Roles).ToList();
-            return result;
+            return _context.Usuarios.Include(x => x.Roles).ToList();
         }
         catch (Exception ex)
         {
-            throw new Exception("Sucedió un error: " + ex.Message);
+            throw new Exception("Error al obtener usuarios: " + ex.Message);
         }
     }
 
@@ -32,64 +32,75 @@ public class UsuarioServices : IUsuarioServices
     {
         try
         {
-            // Hashear la contraseña antes de guardar
             var hashedPassword = HashPassword(request.Password);
-
-            Usuario usuario = new Usuario()
+            Usuario usuario = new Usuario
             {
                 Nombre = request.Nombre,
                 UserName = request.UserName,
-                Password = hashedPassword,  // Almacenar la contraseña hasheada
+                Password = hashedPassword,
                 FKRol = request.FKRol,
+                Added_on = DateTime.Now
             };
 
             _context.Usuarios.Add(usuario);
-            int result = _context.SaveChanges();
-            return result > 0;
+            return _context.SaveChanges() > 0;
         }
         catch (Exception ex)
         {
-            throw new Exception("Sucedió un error: " + ex.Message);
+            throw new Exception("Error al crear usuario: " + ex.Message);
         }
     }
 
-    // Método para obtener el hash de la contraseña
     public string HashPassword(string password)
     {
         return _passwordHasher.HashPassword(null, password);
     }
 
-    // Método para verificar la contraseña al iniciar sesión
     public Usuario Login(string username, string password)
     {
-        // Incluye la entidad Rol relacionada
-        var usuario = _context.Usuarios
-                              .Include(u => u.Roles)  // Asegúrate de que la propiedad de navegación sea "Roles"
-                              .FirstOrDefault(u => u.UserName == username);
-
-        if (usuario != null)
+        try
         {
-            var result = _passwordHasher.VerifyHashedPassword(usuario, usuario.Password, password);
+            var usuario = _context.Usuarios
+                                  .Include(u => u.Roles) // Cargar la relación con Roles
+                                  .FirstOrDefault(u => u.UserName.ToLower() == username.ToLower());
 
+            if (usuario == null)
+            {
+                Console.WriteLine($"Usuario '{username}' no encontrado.");
+                return null;
+            }
+
+            Console.WriteLine($"Usuario encontrado: {usuario.UserName}");
+            Console.WriteLine($"Rol del usuario: {usuario.Roles?.Nombre ?? "Sin rol asignado"}");
+
+            var result = _passwordHasher.VerifyHashedPassword(usuario, usuario.Password, password);
             if (result == PasswordVerificationResult.Success)
             {
-                return usuario;  // Devuelve el usuario con el rol incluido
+                Console.WriteLine("Contraseña válida. Usuario autenticado.");
+                return usuario;
+            }
+            else
+            {
+                Console.WriteLine("Contraseña incorrecta.");
             }
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error en Login: " + ex.Message);
+        }
 
-        return null;  // Usuario o contraseña incorrectos
+        return null;
     }
 
     public Usuario GetUsuarioById(int id)
     {
         try
         {
-            Usuario result = _context.Usuarios.Find(id);
-            return result;
+            return _context.Usuarios.Include(u => u.Roles).FirstOrDefault(u => u.PkUsuario == id);
         }
         catch (Exception ex)
         {
-            throw new Exception("Sucedió un error: " + ex.Message);
+            throw new Exception("Error al obtener usuario por ID: " + ex.Message);
         }
     }
 
@@ -97,7 +108,7 @@ public class UsuarioServices : IUsuarioServices
     {
         try
         {
-            Usuario usuario = _context.Usuarios.Find(request.PkUsuario);
+            var usuario = _context.Usuarios.Find(request.PkUsuario);
             if (usuario == null) return false;
 
             usuario.Nombre = request.Nombre;
@@ -109,7 +120,7 @@ public class UsuarioServices : IUsuarioServices
         }
         catch (Exception ex)
         {
-            throw new Exception("Sucedió un error: " + ex.Message);
+            throw new Exception("Error al editar usuario: " + ex.Message);
         }
     }
 
@@ -117,7 +128,7 @@ public class UsuarioServices : IUsuarioServices
     {
         try
         {
-            Usuario usuario = _context.Usuarios.Find(id);
+            var usuario = _context.Usuarios.Find(id);
             if (usuario == null) return false;
 
             _context.Usuarios.Remove(usuario);
@@ -125,7 +136,7 @@ public class UsuarioServices : IUsuarioServices
         }
         catch (Exception ex)
         {
-            throw new Exception("Sucedió un error: " + ex.Message);
+            throw new Exception("Error al eliminar usuario: " + ex.Message);
         }
     }
 
@@ -137,16 +148,25 @@ public class UsuarioServices : IUsuarioServices
         }
         catch (Exception ex)
         {
-            throw new Exception("Error al obtener los roles: " + ex.Message);
+            throw new Exception("Error al obtener roles: " + ex.Message);
         }
     }
 
     public void Register(Usuario usuario)
     {
-        usuario.FKRol = 2;
-        usuario.Added_on = DateTime.Now;
+        try
+        {
+            usuario.Password = HashPassword(usuario.Password);
+            usuario.FKRol = usuario.FKRol > 0 ? usuario.FKRol : 2; // Rol por defecto si no se asigna
+            usuario.Added_on = DateTime.Now;
 
-        _context.Usuarios.Add(usuario);
-        _context.SaveChanges();
+            _context.Usuarios.Add(usuario);
+            _context.SaveChanges();
+            Console.WriteLine("Usuario registrado exitosamente.");
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("Error al registrar usuario: " + ex.Message);
+        }
     }
 }

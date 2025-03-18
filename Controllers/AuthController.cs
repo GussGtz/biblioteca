@@ -1,12 +1,11 @@
 ﻿using Azure;
-using BibliotecaSánchezLobatoGael83.Models.Domain;
-using BibliotecaSánchezLobatoGael83.Services.IServices;
+using BibliotecaGustavoGtz.Models.Domain;
+using BibliotecaGustavoGtz.Services.IServices;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-
 public class AuthController : Controller
 {
     private readonly IUsuarioServices _usuarioServices;

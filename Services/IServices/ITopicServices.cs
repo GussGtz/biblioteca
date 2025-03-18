@@ -1,6 +1,6 @@
-﻿using BibliotecaSánchezLobatoGael83.Models.Domain;
+﻿using BibliotecaGustavoGtz.Models.Domain;
 
-namespace BibliotecaSánchezLobatoGael83.Services.IServices
+namespace BibliotecaGustavoGtz.Services.IServices
 {
     public interface ITopicServices
     {

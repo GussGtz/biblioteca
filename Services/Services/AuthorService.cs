@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using BibliotecaSánchezLobatoGael83.Models.Domain;
-using BibliotecaSánchezLobatoGael83.Services.Interfaces;
-using BibliotecaSánchezLobatoGael83.Context;
+using BibliotecaGustavoGtz.Models.Domain;
+using BibliotecaGustavoGtz.Services.Interfaces;
+using BibliotecaGustavoGtz.Context;
 
-namespace BibliotecaSánchezLobatoGael83.Services
+namespace BibliotecaGustavoGtz.Services
 {
     public class AuthorService : IAuthorService
     {

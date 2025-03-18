@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using BibliotecaSánchezLobatoGael83.Models.Domain;
-using BibliotecaSánchezLobatoGael83.Services.Interfaces;
+using BibliotecaGustavoGtz.Models.Domain;
+using BibliotecaGustavoGtz.Services.Interfaces;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-namespace BibliotecaSánchezLobatoGael83.Controllers
+namespace BibliotecaGustavoGtz.Controllers
 {
     public class AuthorsController : Controller
     {

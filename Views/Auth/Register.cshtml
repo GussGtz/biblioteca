@@ -10,9 +10,9 @@
     <title>Registrar Usuario</title>
     <style>
         body {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fff;
+            background: #f4f4f4;
+            font-family: Arial, sans-serif;
+            color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -21,31 +21,29 @@
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            background: #fff;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 400px;
+            max-width: 350px;
             text-align: center;
         }
 
         h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 20px;
-            color: #fff;
-            font-weight: bold;
+            color: #333;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-align: left;
         }
 
         label {
             font-size: 1rem;
-            color: #fff;
+            color: #333;
             margin-bottom: 5px;
             display: block;
         }
@@ -53,59 +51,35 @@
         .form-control {
             width: 100%;
             padding: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
             font-size: 1rem;
-            transition: border-color 0.3s ease, background 0.3s ease;
         }
 
             .form-control:focus {
-                border-color: #007bff;
-                background: rgba(255, 255, 255, 0.2);
+                border-color: #28a745;
                 outline: none;
             }
 
         .btn-primary {
-            background: linear-gradient(135deg, #007bff, #0056b3);
+            background: #28a745;
             border: none;
-            border-radius: 8px;
-            padding: 10px 20px;
+            border-radius: 5px;
+            padding: 10px;
             font-size: 1rem;
             color: #fff;
             cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease;
             width: 100%;
+            transition: background 0.3s ease;
         }
 
             .btn-primary:hover {
-                background: linear-gradient(135deg, #0056b3, #007bff);
-                transform: translateY(-2px);
+                background: #218838;
             }
-
-        .mt-3 {
-            margin-top: 20px;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-            a:hover {
-                color: #0056b3;
-            }
-
-        p {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9rem;
-        }
     </style>
 </head>
 <body>
-    <div class="container mt-4">
+    <div class="container">
         <h2>Registrar Usuario</h2>
         <form method="post">
             <div class="form-group">
@@ -120,7 +94,7 @@
                 <label for="password">Contraseña</label>
                 <input type="password" id="password" name="Password" class="form-control" required />
             </div>
-            <button type="submit" class="btn btn-primary mt-3">Registrar</button>
+            <button type="submit" class="btn btn-primary">Registrar</button>
         </form>
     </div>
 </body>

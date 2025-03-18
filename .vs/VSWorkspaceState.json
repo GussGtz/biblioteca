@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Context",
+    "\\Controllers",
+    "\\Migrations",
+    "\\Services",
+    "\\Services\\Services",
+    "\\Views",
+    "\\Views\\Auth",
+    "\\Views\\Authors",
+    "\\Views\\Roles"
+  ],
+  "SelectedNode": "\\Controllers\\ColletionsController.cs",
+  "PreviewInSolutionExplorer": false
+}

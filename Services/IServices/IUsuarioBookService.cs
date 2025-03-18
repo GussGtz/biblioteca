@@ -1,8 +1,8 @@
-﻿using BibliotecaSánchezLobatoGael83.Models;
-using BibliotecaSánchezLobatoGael83.Models.Domain;
+﻿using BibliotecaGustavoGtz.Models;
+using BibliotecaGustavoGtz.Models.Domain;
 using System.Collections.Generic;
 
-namespace BibliotecaSánchezLobatoGael83.Services
+namespace BibliotecaGustavoGtz.Services
 {
     public interface IUsuarioBookService
     {

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.IdentityModel.Tokens;
 
-namespace BibliotecaSánchezLobatoGael83.Middleware
+namespace BibliotecaGustavoGtz.Middleware
 {
     public class JwtMiddleware
     {

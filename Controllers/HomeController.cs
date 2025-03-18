@@ -1,8 +1,8 @@
 using System.Diagnostics;
-using BibliotecaSánchezLobatoGael83.Models;
+using BibliotecaGustavoGtz.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BibliotecaSánchezLobatoGael83.Controllers
+namespace BibliotecaGustavoGtz.Controllers
 {
     public class HomeController : Controller
     {

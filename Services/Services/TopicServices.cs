@@ -1,9 +1,9 @@
-﻿using BibliotecaSánchezLobatoGael83.Context;
-using BibliotecaSánchezLobatoGael83.Models.Domain;
-using BibliotecaSánchezLobatoGael83.Services.IServices;
+﻿using BibliotecaGustavoGtz.Context;
+using BibliotecaGustavoGtz.Models.Domain;
+using BibliotecaGustavoGtz.Services.IServices;
 using Microsoft.EntityFrameworkCore;
 
-namespace BibliotecaSánchezLobatoGael83.Services.Services
+namespace BibliotecaGustavoGtz.Services.Services
 {
     public class TopicServices : ITopicServices
     {

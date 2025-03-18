@@ -1,4 +1,4 @@
-namespace BibliotecaSánchezLobatoGael83.Models
+namespace BibliotecaGustavoGtz.Models
 {
     public class ErrorViewModel
     {

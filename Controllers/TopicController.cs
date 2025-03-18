@@ -1,8 +1,8 @@
-﻿using BibliotecaSánchezLobatoGael83.Models.Domain;
-using BibliotecaSánchezLobatoGael83.Services.IServices;
+﻿using BibliotecaGustavoGtz.Models.Domain;
+using BibliotecaGustavoGtz.Services.IServices;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BibliotecaSánchezLobatoGael83.Controllers
+namespace BibliotecaGustavoGtz.Controllers
 {
     public class TopicsController : Controller
     {

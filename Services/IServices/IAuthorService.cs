@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using BibliotecaSánchezLobatoGael83.Models.Domain;
+using BibliotecaGustavoGtz.Models.Domain;
 using System.Threading.Tasks;
 
-namespace BibliotecaSánchezLobatoGael83.Services.Interfaces
+namespace BibliotecaGustavoGtz.Services.Interfaces
 {
     public interface IAuthorService
     {

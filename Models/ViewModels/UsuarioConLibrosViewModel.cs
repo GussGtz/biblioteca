@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using BibliotecaSánchezLobatoGael83.Models.Domain;
+using BibliotecaGustavoGtz.Models.Domain;
 
-namespace BibliotecaSánchezLobatoGael83.Models.ViewModels
+namespace BibliotecaGustavoGtz.Models.ViewModels
 {
     public class UsuarioConLibrosViewModel
     {

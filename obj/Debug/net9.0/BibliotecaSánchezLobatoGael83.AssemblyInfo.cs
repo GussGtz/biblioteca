@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BibliotecaSánchezLobatoGael83")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64a7f3857c016254caa5aa66594a8d7314765d63")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e56abb86098091b3a2d56fff722d3503cbb6ef97")]
 [assembly: System.Reflection.AssemblyProductAttribute("BibliotecaSánchezLobatoGael83")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BibliotecaSánchezLobatoGael83")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
